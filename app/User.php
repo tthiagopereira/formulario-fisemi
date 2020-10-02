@@ -15,14 +15,21 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'tipo', 'status','password'
     ];
 
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
+    public function contatos() {
+        return $this->hasMany(Contato::class);
+    }
+
+    public function servicoViatura(){
+        return $this->hasMany('App\ServicoViatura','usuario_id');
+    }
+
+    public function motoristas(){
+        return $this->hasMany(Motorista::class);
+    }
+
     protected $hidden = [
         'password', 'remember_token',
     ];

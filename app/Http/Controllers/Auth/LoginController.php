@@ -7,17 +7,6 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller {
 
-    /*
-    |--------------------------------------------------------------------------
-    | Login Controller
-    |--------------------------------------------------------------------------
-    |
-    | This controller handles authenticating users for the application and
-    | redirecting them to your home creen. The controller uses a trait
-    | to conveniently provide its functionality to your applications.
-    |
-    */
-
     use AuthenticatesUsers;
 
     /**
@@ -44,6 +33,6 @@ class LoginController extends Controller {
      */
     public function showLoginForm()
     {
-        return view('pages.login');
+        return view('pages.pesquisa');
     }
 }
